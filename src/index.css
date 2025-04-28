@@ -222,7 +222,7 @@ textarea {
 polygon {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  stroke: #000;
+  stroke: #162d57;
   fill: transparent;
   animation: draw 4s forwards ease-in-out, fillIn 2s forwards ease-in-out 1s;
 }
