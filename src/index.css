@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "Noirden";
-  src: url("/fonts/Noirden-Light.woff2") format("woff2");
+  src: url("./assets/fonts/Noirden-Light.woff2") format("woff2"),
+    url("./assets/fonts/Noirden-Light.ttf") format("truetype");
   font-weight: 300; /* Light */
   font-style: normal;
   font-display: swap;
@@ -12,7 +13,8 @@
 
 @font-face {
   font-family: "Noirden";
-  src: url("/fonts/Noirden-Regular.woff2") format("woff2");
+  src: url("./assets/fonts/Noirden-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Noirden-Regular.ttf") format("truetype");
   font-weight: 400; /* Regular */
   font-style: normal;
   font-display: swap;
@@ -20,43 +22,36 @@
 
 @font-face {
   font-family: "Noirden";
-  src: url("/fonts/Noirden-Bold.woff2") format("woff2");
+  src: url("./assets/fonts/Noirden-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Noirden-Bold.ttf") format("truetype");
   font-weight: 700; /* Bold */
-  font-style: normal;
+  font-style: bold;
   font-display: swap;
 }
 
-#root {
-  margin: 0 0;
-  line-height: 1.5;
-  font-weight: 400;
-
-  /* color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+* {
+  box-sizing: border-box; /* Asegura que el ancho total incluya bordes y padding */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/* html {
+  font-size: calc(0.8rem + 0.5vw);
+} */
 
 body {
   margin: 0;
-  display: flex;
-  align-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
-  @apply bg-white_gray;
+  width: 100%;
+  min-height: 400vh;
+  /* background-image: url("./assets/background.png"); */
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  font-family: "Noirden", sans-serif;
+  @apply bg-[#c2c7cf]/*bg-[url("./assets/background_sm.png")] md:bg-[url("./assets/background.png")] bg-fixed lg:bg-scroll; */;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
 }
 
 h1 {
@@ -67,7 +62,7 @@ h1 {
 h2 {
   line-height: 1;
 }
-
+/* 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -85,17 +80,125 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+} */
+
+.bg__projects img {
+  @apply absolute w-full h-full object-cover;
+
+  clip-path: inset(100% 0% 0% 0%);
+  will-change: clip-path;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.project__card__image img {
+  clip-path: inset(100% 0% 0% 0%);
+  will-change: clip-path;
+}
+
+.bg__1 {
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+.project__card__image img {
+  @apply absolute left-0 top-0 h-full rounded-lg;
+}
+
+.project__card__index span {
+  @apply text-dark_grey;
+}
+
+.project__card__index__container span {
+  @apply block text-dark_grey;
+}
+
+.project__card__heading__container h1 {
+  @apply text-2xl tracking-wider text-gray-800;
+}
+
+.project__card__paragraph p {
+  @apply tracking-wide text-gray-800;
+}
+.project__card__paragraph__container,
+.project__card__heading__container {
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  @apply text-dark_blue;
+}
+
+.project__card__index__container {
+  transition: transform 0.2s ease-in-out;
+  will-change: transform;
+}
+
+.project__card__index__container span {
+  @apply text-dark_blue;
+}
+
+.masking__text {
+  @apply block overflow-hidden;
+}
+
+.masking__text div {
+  will-change: transform;
+}
+
+.contact_wrapper a {
+  @apply text-dark_blue text-lg;
+}
+
+.contact_wrapper h3 {
+  @apply text-lg font-bold;
+}
+
+.form_wrapper h3 {
+  @apply font-bold;
+}
+.form_wrapper input,
+textarea {
+  @apply rounded-[0.5rem];
+}
+
+.footer_banner a {
+  @apply text-dark_blue font-bold text-sm;
+}
+
+.horizontal_testimonial h2 {
+  @apply text-2xl;
+}
+
+/* .horizontal_testimonial p {
+  @apply font-light before:content-['“'] after:content-['”']  after:absolute before:left-0 after:right-0 before:top-0 after:bottom-0 before:text-4xl after:text-4xl;
+} */
+
+/* .vertical_testimonial p {
+  @apply font-light before:content-['“'] after:content-['”']  after:absolute before:left-0 after:right-0 before:top-0 after:bottom-[-2.5rem] before:text-4xl after:text-4xl;
+} */
+
+.horizontal_testimonial img {
+  @apply rounded-[0.5rem];
+}
+
+.vertical_testimonial img {
+  @apply w-2/3 rounded-[0.5rem];
+}
+
+.vertical_testimonial h2 {
+  @apply text-2xl;
+}
+
+.last_testimonial {
+  @apply mb-12;
+}
+
+.employee_info h2 {
+  @apply text-2xl;
+}
+.employee_info p {
+  @apply font-light;
+}
+.image_container {
+  mask-image: linear-gradient(black 50%, transparent);
+}
+
+#header {
+  mask-image: linear-gradient(black 80%, transparent);
 }
