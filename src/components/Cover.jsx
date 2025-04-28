@@ -1,4 +1,5 @@
 import React from "react";
+
 import logo_circle from "../assets/svg/logo_circle.svg";
 import logo_letters from "../assets/svg/logo_letters.svg";
 const Cover = () => {
@@ -20,6 +21,7 @@ const Cover = () => {
           alt="logo_circle"
         ></img>
       </div>
+
       <div
         style={{ height: "18vh", width: "5px" }}
         className="bg-dark_blue rounded-full absolute left-6 "

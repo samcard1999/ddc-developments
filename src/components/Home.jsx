@@ -9,9 +9,16 @@ import Testimonials from "./Testimonials";
 import Team from "./Team";
 import AnimatedBackground from "./Background/Background";
 
-const Home = () => {
+const Home = ({ isPreloading }) => {
   return (
-    <>
+    <div
+      id="home"
+      style={{
+        visibility: isPreloading ? "hidden" : "visible",
+        opacity: isPreloading ? "0" : "1",
+        overflowY: isPreloading ? "hidden" : "auto"
+      }}
+    >
       <NavBar />
       <Cover />
       <About />
@@ -20,7 +27,7 @@ const Home = () => {
       <Testimonials />
       <Team />
       <Footer />
-    </>
+    </div>
   );
 };
 
