@@ -14,12 +14,12 @@ const About = () => {
         scrollTrigger: {
           trigger: element, // Cada elemento será su propio trigger
           start: "-120px bottom",
-          end: "bottom+=50px bottom",
+          end: "bottom+=250px bottom",
           scrub: true,
           toggleActions: "play none play none"
         },
         right: "300px",
-        opacity: 0.4,
+        opacity: 0.1,
         duration: 1.4
       });
     });
@@ -28,12 +28,12 @@ const About = () => {
         scrollTrigger: {
           trigger: element, // Cada elemento será su propio trigger
           start: "-120px bottom",
-          end: "bottom+=50px bottom",
+          end: "bottom+=250px bottom",
           scrub: true,
           toggleActions: "play none play none"
         },
         left: "300px",
-        opacity: 0.4,
+        opacity: 0.1,
         duration: 1.4
       });
     });
