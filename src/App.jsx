@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <ReactLenis options={{ duration: 0.7 }} root>
+    <ReactLenis options={{ duration: 0.9 }} root>
       <AnimatedBackground />
       <Home isPreloading={isPreloading} />
       <Preloader isPreloading={isPreloading} />
