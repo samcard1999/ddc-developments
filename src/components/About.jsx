@@ -5,6 +5,40 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import send_button from "../assets/svg/send_button.svg";
 
 const About = () => {
+  const statistic_1 = useRef(null);
+  const statistic_2 = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.utils.toArray(".statistic_1").forEach((element) => {
+      gsap.from(element, {
+        scrollTrigger: {
+          trigger: element, // Cada elemento será su propio trigger
+          start: "-120px bottom",
+          end: "bottom+=50px bottom",
+          scrub: true,
+          toggleActions: "play none play none"
+        },
+        right: "300px",
+        opacity: 0.4,
+        duration: 1.4
+      });
+    });
+    gsap.utils.toArray(".statistic_2").forEach((element) => {
+      gsap.from(element, {
+        scrollTrigger: {
+          trigger: element, // Cada elemento será su propio trigger
+          start: "-120px bottom",
+          end: "bottom+=50px bottom",
+          scrub: true,
+          toggleActions: "play none play none"
+        },
+        left: "300px",
+        opacity: 0.4,
+        duration: 1.4
+      });
+    });
+  }, []);
+
   function AnimatedText({ children }) {
     const text = useRef(null);
 
@@ -23,7 +57,7 @@ const About = () => {
       });
     }, []);
     return (
-      <span className="relative" ref={text}>
+      <span className="relative  " ref={text}>
         {children}
       </span>
     );
@@ -64,7 +98,7 @@ const About = () => {
             className="bg-dark_blue rounded-full relative mr-10 "
           ></div>
         </div>
-        <div className="flex pl-10 items-center gap-4 ">
+        <div className="statistic_1 flex pl-10 items-center gap-4 relative">
           <div
             style={{ height: "6vh", width: "5px" }}
             className="bg-dark_blue rounded-full relative "
@@ -74,7 +108,7 @@ const About = () => {
             <br /> square feet built.
           </h2>
         </div>
-        <div className="flex pr-10 items-center gap-4  justify-end text-right">
+        <div className="statistic_2 flex pr-10 items-center gap-4  justify-end text-right relative">
           <h2>
             More than <b>$ 800.000.000</b>
             <br /> investments.
@@ -84,7 +118,7 @@ const About = () => {
             className="bg-dark_blue rounded-full relative "
           ></div>
         </div>
-        <div className="flex pl-10 items-center gap-4 ">
+        <div className=" statistic_1 relative flex pl-10 items-center gap-4 ">
           <div
             style={{ height: "6vh", width: "5px" }}
             className="bg-dark_blue rounded-full relative "
@@ -95,7 +129,7 @@ const About = () => {
             <br /> under development.
           </h2>
         </div>
-        <div className="flex pr-10 items-center gap-4  justify-end text-right">
+        <div className=" statistic_2 relative flex pr-10 items-center gap-4  justify-end text-right">
           <h2>
             Return of up to <b>35 %</b>
             <br /> in less than 3 months.
