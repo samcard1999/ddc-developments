@@ -38,7 +38,7 @@ const Testimonials = () => {
         <div className="vertical_testimonial flex flex-col  text-right items-end justify-center relative w-full">
           <img
             loading="lazy"
-            src="assets/testimonials/testimonial_2.jpeg"
+            src="assets/testimonials/testimonial_3.jpeg"
             alt="testimonial_2"
           />
           <h2>
@@ -60,7 +60,7 @@ const Testimonials = () => {
         <div className="horizontal_testimonial last_testimonial flex flex-col  text-left items-start justify-center relative w-full">
           <img
             loading="lazy"
-            src="assets/testimonials/testimonial_4.jpeg"
+            src="assets/testimonials/testimonial_2.jpeg"
             alt="testimonial_3"
           />
           <h2>

@@ -242,10 +242,10 @@ const Projects = () => {
                 ref={headingRef}
                 className="project__card__heading__container"
               >
-                <h1>Villa Atlantico</h1>
-                <h1>Villa Dorticos</h1>
-                <h1>Villa Nukes</h1>
-                <h1>Villa Guajira</h1>
+                <h1>Villa Ochoa</h1>
+                <h1>Villa Santa Marta</h1>
+                <h1>Villa Victor</h1>
+                <h1>Villa Esplanade</h1>
               </div>
             </div>
             <div
@@ -303,7 +303,7 @@ const Projects = () => {
                 </div>
                 <div className="desc__1 absolute top-0 left-0 right-0 bottom-0 text-center w-full">
                   <div className="masking__text">
-                    <div>Villa Guajira is a modern duplex in Miami,</div>
+                    <div>Villa Santa Marta is a modern duplex in Miami,</div>
                   </div>
                   <div className="masking__text">
                     <div>offering clean lines, warm textures, and </div>
@@ -320,7 +320,7 @@ const Projects = () => {
                 </div>
                 <div className="desc__2 absolute top-0 left-0 right-0 bottom-0 text-center w-full">
                   <div className="masking__text">
-                    <div>Villa Nukes embraces calm sophistication </div>
+                    <div>Villa Victor embraces calm sophistication </div>
                   </div>
                   <div className="masking__text">
                     <div>through clean design and natural elegance. </div>
@@ -334,7 +334,7 @@ const Projects = () => {
                 </div>
                 <div className="desc__3 absolute top-0 left-0 right-0 bottom-0 text-center w-full">
                   <div className="masking__text">
-                    <div>Villa Dorticos blends bold geometry and</div>
+                    <div>Villa Esplanade blends bold geometry and</div>
                   </div>
                   <div className="masking__text">
                     <div> organic softness. A dark, elegant façade</div>

@@ -99,7 +99,7 @@ button:focus-visible {
 }
 
 .project__card__image img {
-  @apply absolute left-0 top-0 h-full rounded-lg;
+  @apply absolute left-0 top-0 h-full rounded-[0.5rem];
 }
 
 .project__card__index span {
