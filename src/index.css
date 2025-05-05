@@ -253,3 +253,26 @@ polygon {
 .statistic_2 {
   @apply lg:text-xl;
 }
+
+.project_card {
+  @apply w-[45%] h-[55vh]  absolute top-1/4 left-0 transform -translate-y-1/2 rounded-2xl rounded-s-none pr-16 py-6 bg-yellow-50 flex items-start gap-2;
+}
+
+.project_wrapper {
+}
+
+/* .project_wrapper:nth-child(1) {
+  @apply z-10 opacity-100;
+}
+
+.project_wrapper:nth-child(2) {
+  @apply z-20;
+}
+
+.project_wrapper:nth-child(3) {
+  @apply z-30;
+}
+
+.project_wrapper:nth-child(4) {
+  @apply z-40;
+} */

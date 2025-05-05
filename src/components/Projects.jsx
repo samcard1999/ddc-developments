@@ -10,6 +10,7 @@ const Projects = () => {
   const indexRef = useRef(null);
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
+  const projectCardRef = useRef(null);
 
   useEffect(() => {
     if (bgRef.current && window.innerWidth < 600) {
@@ -202,6 +203,20 @@ const Projects = () => {
         }
       }
     }
+
+    if (window.innerWidth > 600) {
+      const projectCards = projectCardRef.current.children;
+      const cardWidth = 64;
+      console.log(cardWidth);
+      for (let i = 0; i < projectCards.length; i++) {
+        projectCards[i].style.zIndex = 4 - i;
+        // projectCards[i].style.transform = `translateX(${cardWidth * i}px)`;
+        projectCards[i].style.transform = `translate3d(${
+          cardWidth * i
+        }px, 0px,${1000 * 0.1 * i}px)
+        `;
+      }
+    }
   }, []);
 
   return (
@@ -387,27 +402,80 @@ const Projects = () => {
           ></img>
         </div>
       </div>
-      <div className="w-[50%] h-1/2 rounded-2xl rounded-s-none pr-16 py-6 bg-yellow-50 flex items-start gap-2 relative">
-        <img
-          alt="bg_1"
-          src="assets/projects/bg/bg__1.jpeg"
-          className="rounded-xl object-cover h-full w-full"
-        ></img>
-        <button className="text-bold rotate-90 whitespace-nowrap text-2xl absolute top-16 right-[-2rem]">
-          Villa Ochoa
-        </button>
-        <img
-          alt="arrow_button"
-          src="assets/projects/arrow_projects.svg"
-          className="h-8 absolute right-4 bottom-6"
-        ></img>
+      <div ref={projectCardRef} className="project_wrapper ">
+        <div className="project_card">
+          <img
+            alt="bg_1"
+            src="assets/projects/bg/bg__1.jpeg"
+            className="rounded-xl object-cover h-full w-full"
+          ></img>
+          <button className="text-bold rotate-90 origin-top-left whitespace-nowrap text-2xl absolute top-8 right-[-7rem]">
+            Villa Ochoa
+          </button>
+          <img
+            alt="arrow_button"
+            src="assets/projects/arrow_projects.svg"
+            className="h-8 absolute right-4 bottom-6"
+          ></img>
+        </div>
+        <div className="project_card">
+          <img
+            alt="bg_2"
+            src="assets/projects/bg/bg__2.jpeg"
+            className="rounded-xl object-cover h-full w-full"
+          ></img>
+          <button className="text-bold rotate-90 origin-top-left whitespace-nowrap text-2xl absolute top-8 right-[-7rem]">
+            Villa Victor
+          </button>
+          <img
+            alt="arrow_button"
+            src="assets/projects/arrow_projects.svg"
+            className="h-8 absolute right-4 bottom-6"
+          ></img>
+        </div>
+        <div className="project_card">
+          <img
+            alt="bg_3"
+            src="assets/projects/bg/bg__3.jpeg"
+            className="rounded-xl object-cover h-full w-full"
+          ></img>
+          <button className="text-bold rotate-90 origin-top-left whitespace-nowrap text-2xl absolute top-8 right-[-11rem]">
+            Villa Santa Marta
+          </button>
+          <img
+            alt="arrow_button"
+            src="assets/projects/arrow_projects.svg"
+            className="h-8 absolute right-4 bottom-6"
+          ></img>
+        </div>
+        <div className="project_card">
+          <img
+            alt="bg_4"
+            src="assets/projects/bg/bg__4.jpeg"
+            className="rounded-xl object-cover h-full w-full"
+          ></img>
+          <button className="text-bold rotate-90 origin-top-left whitespace-nowrap text-2xl absolute top-8 right-[-9.5rem]">
+            Villa Esplanade
+          </button>
+          <img
+            alt="arrow_button"
+            src="assets/projects/arrow_projects.svg"
+            className="h-8 absolute right-4 bottom-6"
+          ></img>
+        </div>
       </div>
-      <div className="hidden lg:block text-right">
-        <h1 className="font-bold">Explore Our Projects</h1>
-        <h2 className="text-2xl text-right">
-          Consult the essential data for your
-          <br /> next investment
-        </h2>
+      <div className="hidden lg:flex gap-2">
+        <div className="hidden lg:block text-right ">
+          <h1 className="font-bold text-4xl">Explore Our Projects</h1>
+          <h2 className="text-xl text-right">
+            Consult the essential data for your
+            <br /> next investment
+          </h2>
+        </div>
+        <div
+          style={{ width: "5px" }}
+          className="bg-dark_blue rounded-full relative   "
+        ></div>
       </div>
     </section>
   );
