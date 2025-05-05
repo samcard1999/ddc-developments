@@ -111,7 +111,7 @@ const Testimonials = () => {
             className="bg-dark_blue rounded-full  "
           ></div>
         </div>
-        <div className="horizontal_testimonial flex flex-col gap-1 text-left items-start justify-center relative w-full">
+        <div className="horizontal_testimonial lg:w-[40%] flex flex-col gap-1 text-left items-start justify-center relative w-full">
           <img
             loading="lazy"
             src="assets/testimonials/testimonial_1.jpeg"
@@ -132,11 +132,12 @@ const Testimonials = () => {
             between, they were very helpful and knowledgable.<b> ”</b>
           </p>
         </div>
-        <div className="vertical_testimonial flex flex-col  text-right items-end justify-center relative w-full">
+        <div className="vertical_testimonial flex flex-col  text-right items-end justify-end relative w-full lg:mt-[-24rem]">
           <img
             loading="lazy"
             src="assets/testimonials/testimonial_3.jpeg"
             alt="testimonial_2"
+            className="lg:w-[50%]"
           />
           <h2>
             <b>Crhis</b> Wey
@@ -147,14 +148,14 @@ const Testimonials = () => {
           <h3>
             <b>04-01-23</b>
           </h3>
-          <p>
+          <p className="lg:w-1/3">
             <b>“ </b> DDC Developments was the missing piece to my puzzle. From
             start to finish, they solved every problem and helped us achieve our
             goals in the most professional way possible.and knowledgable.{"   "}
             <b> ”</b>
           </p>
         </div>
-        <div className="horizontal_testimonial last_testimonial flex flex-col  text-left items-start justify-center relative w-full">
+        <div className="horizontal_testimonial last_testimonial flex flex-col w-full lg:w-[50%] lg:mt-[-10rem] text-left items-start justify-center relative ">
           <img
             loading="lazy"
             src="assets/testimonials/testimonial_2.jpeg"

@@ -67,7 +67,7 @@ const About = () => {
     "At DDC Developments, we are",
     " dedicated to transforming the ",
     "construction industry with a strong ",
-    "commitment to environmental",
+    "commitment to environmental ",
     "responsibility. By leveraging cutting-",
     "edge technologies like our modular ",
     "systems, we offer innovative and",
@@ -79,39 +79,55 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="w-full h-auto relative">
-      <div className="flex flex-col justify-end gap-28">
-        <h1 className="mb-8 mr-10 text-right relative top-16 text-7xl leading-[1.1]">
-          <b>
-            The future
-            <br /> is not Waited
-          </b>
+    <section
+      id="about"
+      className="w-full flex flex-col gap-28 h-auto relative overflow-hidden"
+    >
+      <div className="flex flex-col lg:flex-row lg:px-32 justify-center items-stretch mt-32 gap-28 lg:gap-12">
+        <h1 className="flex-1 mb-8 mr-10  lg:top-0 lg:mr-0 lg:mb-0 lg:leading-[0.7] w-auto text-right relative  text-7xl leading-[1.1] ">
+          <b className="hidden lg:inline text-5xl">The future is</b>
+          <b className="lg:hidden">The future </b>
+          <span className="lg:hidden font-bold">
+            {" "}
+            is not
+            <br /> Waited
+          </span>
+          <span className="hidden font-bold lg:inline text-5xl">
+            <br /> not Waited, it is
+            <br /> built
+          </span>
         </h1>
-        <div className="relative flex gap-4 mb-8 top-2/4 justify-center items-center ">
-          <p className="relative text-right top-2/4 pl-4  text-xl font-light">
+        <div
+          style={{ width: "6px" }}
+          className="bg-dark_blue rounded-full h-auto relative hidden lg:block"
+        ></div>
+        <div className="flex-1 relative flex gap-4 justify-center items-center">
+          <p className="flex-1 relative  text-right text-xl font-light lg:text-left">
             {phrases.map((phrase, index) => {
               return <AnimatedText key={index}>{phrase}</AnimatedText>;
             })}
           </p>
           <div
-            style={{ height: "18vh", width: "50px" }}
-            className="bg-dark_blue rounded-full relative mr-10 "
+            style={{ height: "18vh", width: "6px" }}
+            className="bg-dark_blue rounded-full h-auto relative mr-10 lg:order-1 lg:hidden"
           ></div>
         </div>
+      </div>
+      <div className="flex flex-col gap-28 ">
         <div className="statistic_1 flex pl-10 items-center gap-4 relative">
           <div
             style={{ height: "6vh", width: "5px" }}
             className="bg-dark_blue rounded-full relative "
           ></div>
           <h2>
-            More than <b>3.000.000</b>
-            <br /> square feet built.
+            More than <b>300</b>
+            <br /> properties.
           </h2>
         </div>
         <div className="statistic_2 flex pr-10 items-center gap-4  justify-end text-right relative">
           <h2>
             More than <b>$ 800.000.000</b>
-            <br /> investments.
+            <br /> investments in projects.
           </h2>
           <div
             style={{ height: "6vh", width: "5px" }}
@@ -124,22 +140,36 @@ const About = () => {
             className="bg-dark_blue rounded-full relative "
           ></div>
           <h2>
-            More than <b>200 </b>
-            properties
-            <br /> under development.
+            In house manufacture <br />
+            <b>facility </b>
+            in Florida
           </h2>
         </div>
         <div className=" statistic_2 relative flex pr-10 items-center gap-4  justify-end text-right">
           <h2>
-            Return of up to <b>35 %</b>
-            <br /> in less than 3 months.
+            <b>Investment</b>
+            <br /> Platform.
           </h2>
           <div
             style={{ height: "6vh", width: "5px" }}
             className="bg-dark_blue rounded-full relative "
           ></div>
         </div>
-
+        <div className=" statistic_1 relative flex pl-10 items-center gap-4 ">
+          <div
+            style={{ height: "6vh", width: "5px" }}
+            className="bg-dark_blue rounded-full relative "
+          ></div>
+          <h2>
+            <b>Modular construction</b> with
+            <br />
+            power to manufacture <b>40 properties</b>
+            <br />
+            per day and build <b>2500 sq.ft</b> of perimeter
+            <br />
+            per day.
+          </h2>
+        </div>
         <div className="flex gap-4 justify-center pb-20 w-full items-center">
           <h2 className="text-xl font-bold">
             Start your new

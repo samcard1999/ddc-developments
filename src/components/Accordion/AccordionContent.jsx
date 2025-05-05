@@ -25,7 +25,7 @@ const AccordionContainer = () => {
     {
       title: "Software BIM",
       answer:
-        "Labore Lorem ex et laboris dolore elit eiusmod dolor esse. Nisi aliqua ea pariatur ipsum anim irure quis anim cupidatat tempor consectetur ut nisi ut. Aute ex nostrud voluptate cillum. Est id proident adipisicing esse aliqua enim est id ullamco qui. Consequat irure adipisicing tempor incididunt in duis quis officia dolor ad excepteur. Lorem et magna anim exercitation cillum culpa reprehenderit. Elit in aute officia quis Lorem in excepteur et id amet eu excepteur sunt.",
+        "Labore Lorem ex et laboris dolore elit eiusmod dolor esse. Nisi aliqua ea pariatur ipsum anim irure quis anim cupidatat tempor consectetur ut nisi ut. Aute ex nostrud voluptate cillum. Est id proident adipisicing esse aliqua enim est id ullamco qui. Consequat irure adipisicing tempor incididunt in duis quis officia dolor ad excepteur.",
       number: "03"
     },
     {
@@ -102,17 +102,22 @@ const AccordionContainer = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="absolute top-1/4">
-      {data.map((item, index) => (
-        <Accordion
-          key={index}
-          title={item.title}
-          answer={item.answer}
-          number={item.number}
-          isOpen={openAccordion === index} // Verifica si este acordeón está abierto
-          onToggle={() => handleUserInteraction(index)} // Maneja la interacción del usuario
-        />
-      ))}
+    <div className="flex gap-16">
+      <div
+        ref={containerRef}
+        className="absolute top-1/4 lg:top-[30%] lg:max-w-max"
+      >
+        {data.map((item, index) => (
+          <Accordion
+            key={index}
+            title={item.title}
+            answer={item.answer}
+            number={item.number}
+            isOpen={openAccordion === index} // Verifica si este acordeón está abierto
+            onToggle={() => handleUserInteraction(index)} // Maneja la interacción del usuario
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 const Accordion = ({ title, answer, number, isOpen, onToggle }) => {
   return (
-    <div className="py-2 w-full px-4">
+    <div className="py-2 w-full px-4 lg:max-w-[35%]">
       <button
         onClick={onToggle} // Llama a la función para alternar el estado
         className={`flex justify-between items-center w-full border-b text-6xl ${
@@ -57,6 +57,24 @@ const Accordion = ({ title, answer, number, isOpen, onToggle }) => {
         }`}
       >
         <div className="overflow-hidden">{answer}</div>
+        <div className="lg:hidden overflow-hidden flex items-center justify-center mt-4">
+          <img
+            src={`assets/technologies/bg__${number}.jpeg`}
+            alt={`${number}.jpeg`}
+            className={`object-cover overflow-hidden ${
+              isOpen ? "max-h-none" : "max-h-0"
+            } w-[75vw] h-[75vw] rounded-xl `}
+          ></img>
+        </div>
+      </div>
+      <div className="hidden lg:block absolute lg:left-1/2 lg:top-[20%] ">
+        <img
+          src={`assets/technologies/bg__${number}.jpeg`}
+          alt={`${number}.jpeg`}
+          className={`object-cover overflow-hidden w-[24vw] h-[24vw]   ${
+            isOpen ? "opacity-100" : "opacity-0" // Cambia la opacidad en pantallas grandes
+          } transition-opacity duration-700`}
+        ></img>
       </div>
     </div>
   );

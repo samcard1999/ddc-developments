@@ -44,9 +44,18 @@ const NavBar = () => {
   return (
     <header
       id="header"
-      className="fixed backdrop-blur flex z-50   justify-between items-center top-0 left-0 right-0 px-5 pt-6 pb-4 h-auto w-full"
+      className="fixed backdrop-blur flex z-50   justify-between items-center top-0 left-0 right-0 px-5 pt-6 pb-4 lg:px-6 lg:pt-8 lg:pb-6 w-full"
     >
-      <img src={logo_circle} alt="logo-circle" className="h-12"></img>
+      <img
+        src={logo_letters}
+        alt="logo-letters"
+        className="h-3 hidden lg:block"
+      ></img>
+      <img
+        src={logo_circle}
+        alt="logo-circle"
+        className="h-12 lg:absolute lg:left-1/2 lg:translate-x-[-50%]"
+      ></img>
       <div className="text-base text-dark_blue flex  ">
         <a className="text-inherit hover:te</div>xt-dark_grey mr-4" href="#">
           Contact

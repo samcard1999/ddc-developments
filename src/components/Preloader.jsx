@@ -18,6 +18,7 @@ const Preloader = ({ isPreloading }) => {
         viewBox="0 0 510.24 235.41"
         width="90%"
         height="100%"
+        className="lg:w-1/2"
       >
         <g id="Layer_2" data-name="Layer 2">
           <g>

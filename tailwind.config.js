@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/**/.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"], // Asegúrate de incluir tus archivos,
   theme: {
     extend: {
+      screens: {
+        '2xl-custom': '2000px', // Define un nuevo breakpoint para un ancho mínimo de 2000px
+      },
       colors: {
         dark_blue: '#070f1d',
         blue: '#162d57',

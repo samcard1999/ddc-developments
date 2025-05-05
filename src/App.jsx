@@ -14,7 +14,7 @@ function App() {
     // Simula que la carga ha finalizado después de 3 segundos
     const timeoutId = setTimeout(() => {
       setIsPreloading(false);
-    }, 3500); // El tiempo aquí puede ajustarse según el tiempo que dure tu animación
+    }, 1500); // El tiempo aquí puede ajustarse según el tiempo que dure tu animación
 
     return () => clearTimeout(timeoutId); // Limpia el timeout si el componente se desmonta
   }, []);

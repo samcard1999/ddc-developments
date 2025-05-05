@@ -5,6 +5,7 @@ const AnimatedBackground = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
+    const vw = window.innerWidth;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -20,7 +21,7 @@ const AnimatedBackground = () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     mountRef.current.appendChild(renderer.domElement);
 
-    const geometry = new THREE.SphereGeometry(1.2, 8, 8);
+    const geometry = new THREE.SphereGeometry(vw < 600 ? 1.2 : 2.2, 8, 8);
 
     // Material ahora soporta transparencia
     const material = new THREE.MeshBasicMaterial({
@@ -31,19 +32,19 @@ const AnimatedBackground = () => {
 
     const spheres = [];
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < (vw < 600 ? 10 : 5); i++) {
       const sphere = new THREE.Mesh(geometry, material.clone()); // ¡Importante clonar el material!
       sphere.position.set(
         (Math.random() - 0.5) * 14,
         (Math.random() - 0.5) * 14,
-        (Math.random() - 0.5) * 10
+        (Math.random() - 0.5) * (vw < 600 ? 10 : 5)
       );
 
       sphere.userData = {
         velocity: new THREE.Vector3(
           (Math.random() - 0.5) * 0.03,
           (Math.random() - 0.5) * 0.03,
-          (Math.random() - 0.5) * 0.2
+          (Math.random() - 0.5) * (vw < 600 ? 0.2 : 0.017)
         )
       };
 
@@ -140,7 +141,7 @@ const AnimatedBackground = () => {
         left: 0,
         width: "100vw",
         height: "100vh",
-        filter: "blur(66px)",
+        filter: `${window.innerWidth < 600 ? "blur(66px)" : "blur(136px)"}`,
         opacity: ".6",
         zIndex: -1,
         overflow: "hidden"

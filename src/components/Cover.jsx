@@ -4,8 +4,8 @@ import logo_circle from "../assets/svg/logo_circle.svg";
 import logo_letters from "../assets/svg/logo_letters.svg";
 const Cover = () => {
   return (
-    <section className="flex items-center">
-      <div className="flex justify-center gap-12 items-center w-auto h-auto hidden">
+    <section className="flex items-center h-screen relative">
+      <div className="justify-center gap-12 items-center w-auto h-auto hidden">
         <img
           className="w-auto h-[3vh] absolute -translate-x-[calc(50%+56px)]"
           src={logo_letters}
@@ -22,18 +22,17 @@ const Cover = () => {
         ></img>
       </div>
 
-      <div
-        style={{ height: "18vh", width: "5px" }}
-        className="bg-dark_blue rounded-full absolute left-6 "
-      ></div>
-      <h1 className="text-5xl text-left ml-10 ">
-        <b>Designing</b> the future,{" "}
-        <span className="hidden md:block">
-          <br />
-        </span>
-        <b>Building</b> a Legacy
-      </h1>
-      <div className="flex absolute bottom-5 left-0 p-6 justify-between items-center w-full h-auto">
+      <div className="flex justify-center items-stretch absolute left-6 gap-4">
+        <div
+          style={{ width: "6px" }}
+          className="bg-dark_blue rounded-full relative   "
+        ></div>
+        <h1 className="text-5xl text-left  md:text-7xl">
+          <b>Designing</b> the future, <br className="hidden md:block" />
+          <b>Building</b> a Legacy
+        </h1>
+      </div>
+      <div className="flex absolute font-bold bottom-5 left-0 px-10  justify-between items-center w-full h-auto">
         <a href="/" className=" hover: text-inherit">
           Projects
         </a>

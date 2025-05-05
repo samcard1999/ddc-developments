@@ -33,18 +33,21 @@
   box-sizing: border-box; /* Asegura que el ancho total incluya bordes y padding */
 }
 
-/* html {
-  font-size: calc(0.8rem + 0.5vw);
-} */
+html {
+  @apply text-[1rem] xl:text-[1rem] 2xl:text-[1.3rem] 2xl-custom:text-[2.6rem];
+}
 
 body {
   margin: 0;
+
   width: 100%;
   min-height: 400vh;
   /* background-image: url("./assets/background.png"); */
   background-size: cover;
   background-position: center;
   overflow-x: hidden;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
   font-family: "Noirden", sans-serif;
   @apply bg-[#c2c7cf]/*bg-[url("./assets/background_sm.png")] md:bg-[url("./assets/background.png")] bg-fixed lg:bg-scroll; */;
 }
@@ -174,11 +177,11 @@ textarea {
 } */
 
 .horizontal_testimonial img {
-  @apply rounded-[0.5rem];
+  @apply rounded-[0.5rem] lg:rounded-none;
 }
 
 .vertical_testimonial img {
-  @apply w-2/3 rounded-[0.5rem];
+  @apply w-2/3 rounded-[0.5rem] lg:w-1/3 lg:rounded-none;
 }
 
 .vertical_testimonial h2 {
@@ -224,7 +227,7 @@ polygon {
   stroke-dashoffset: 1000;
   stroke: #162d57;
   fill: transparent;
-  animation: draw 4s forwards ease-in-out, fillIn 2s forwards ease-in-out 1s;
+  animation: draw 1.5s forwards ease-in-out, fillIn 1s forwards ease-in-out 1s;
 }
 
 @keyframes draw {
@@ -244,4 +247,9 @@ polygon {
   visibility: hidden;
   overflow-y: hidden;
   transition: opacity 1s ease;
+}
+
+.statistic_1,
+.statistic_2 {
+  @apply lg:text-xl;
 }

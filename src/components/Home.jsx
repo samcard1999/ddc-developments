@@ -16,7 +16,7 @@ const Home = ({ isPreloading }) => {
       style={{
         visibility: isPreloading ? "hidden" : "visible",
         opacity: isPreloading ? "0" : "1",
-        overflowY: isPreloading ? "hidden" : "auto"
+        overflow: "hidden"
       }}
     >
       <NavBar />

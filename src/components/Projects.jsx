@@ -12,7 +12,7 @@ const Projects = () => {
   const paragraphRef = useRef(null);
 
   useEffect(() => {
-    if (bgRef.current) {
+    if (bgRef.current && window.innerWidth < 600) {
       const images = bgRef.current.children; // Accede a los hijos solo si bgRef.current no es null
       const cardImages = cardImageRef.current.children;
       const paragraph = paragraphRef.current.children;
@@ -28,7 +28,7 @@ const Projects = () => {
         scrollTrigger: {
           trigger: "#projects",
           start: "top top",
-          end: "+500% ",
+          end: "+400% ",
           pin: true,
           pinSpacing: true,
           //markers: true,
@@ -205,8 +205,11 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="h-screen w-full relative overflow-hidden">
-      <div className="projects__wrapper relative w-full h-full">
+    <section
+      id="projects"
+      className="h-screen w-full relative overflow-hidden lg:flex lg:gap-2 lg:pr-24 lg:justify-between lg:items-center"
+    >
+      <div className="projects__wrapper lg:hidden relative w-full h-full">
         <div className="keep__scrolling absolute bottom-6 z-10 w-full">
           <h2 className="text-center text-dark_grey text-lg">
             ( Keep Scrolling )
@@ -383,6 +386,28 @@ const Projects = () => {
             src="assets/projects/bg/bg__4.jpeg"
           ></img>
         </div>
+      </div>
+      <div className="w-[50%] h-1/2 rounded-2xl rounded-s-none pr-16 py-6 bg-yellow-50 flex items-start gap-2 relative">
+        <img
+          alt="bg_1"
+          src="assets/projects/bg/bg__1.jpeg"
+          className="rounded-xl object-cover h-full w-full"
+        ></img>
+        <button className="text-bold rotate-90 whitespace-nowrap text-2xl absolute top-16 right-[-2rem]">
+          Villa Ochoa
+        </button>
+        <img
+          alt="arrow_button"
+          src="assets/projects/arrow_projects.svg"
+          className="h-8 absolute right-4 bottom-6"
+        ></img>
+      </div>
+      <div className="hidden lg:block text-right">
+        <h1 className="font-bold">Explore Our Projects</h1>
+        <h2 className="text-2xl text-right">
+          Consult the essential data for your
+          <br /> next investment
+        </h2>
       </div>
     </section>
   );
