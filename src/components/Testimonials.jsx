@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import React, { useLayoutEffect } from "react";
+import AnimatedTextSpan from "./AnimatedText";
 
 const Testimonials = () => {
   // useLayoutEffect(() => {
@@ -102,9 +103,11 @@ const Testimonials = () => {
     >
       <div className="testimonials_wrapper p-6 flex flex-col gap-16">
         <div className="flex gap-4 items-center justify-end">
-          <h1 className="text-right">
-            Some opinions from
-            <br /> our <b>clients</b>
+          <h1 className="text-right leading-none">
+            <AnimatedTextSpan parts={3}>
+              Some opinions from
+              <br /> our <b>clients</b>
+            </AnimatedTextSpan>
           </h1>
           <div
             style={{ height: "10rem", width: "5px" }}

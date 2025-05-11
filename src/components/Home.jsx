@@ -8,8 +8,12 @@ import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import Team from "./Team";
 import AnimatedBackground from "./Background/Background";
+import Projects2 from "./Projects2";
+import Graphic from "./Graphic";
+import useFadeInParagraphs from "./Hooks/useFadeInParagraph";
 
 const Home = ({ isPreloading }) => {
+  useFadeInParagraphs();
   return (
     <div
       id="home"
@@ -22,7 +26,8 @@ const Home = ({ isPreloading }) => {
       <NavBar />
       <Cover />
       <About />
-      <Projects />
+      {/* <Graphic /> */}
+      <Projects2 />
       <Technologies />
       <Testimonials />
       <Team />

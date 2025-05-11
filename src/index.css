@@ -276,3 +276,29 @@ polygon {
 .project_wrapper:nth-child(4) {
   @apply z-40;
 } */
+
+.projects_carousel {
+  scroll-snap-type: x mandatory;
+  transform-origin: bottom left;
+  /* padding-inline: 1.5rem;
+  margin-inline: -1.5rem; */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.projects_carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.carousel_card {
+  flex: 0 0 90%;
+}
+
+/* styles.css o index.css */
+.full-screen-safe {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-top: env(safe-area-inset-top);
+}

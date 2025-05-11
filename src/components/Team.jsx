@@ -1,4 +1,5 @@
 import React from "react";
+import AnimatedTextSpan from "./AnimatedText";
 
 const Team = () => {
   return (
@@ -10,7 +11,9 @@ const Team = () => {
             className="bg-dark_blue rounded-full  "
           ></div>
           <h1 className="text-left">
-            Our <b>Team</b>
+            <AnimatedTextSpan parts={2}>
+              Our <b>Team</b>
+            </AnimatedTextSpan>
           </h1>
         </div>
         <div className="employee_info text-right lg:text-left flex lg:h-[60vh] flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
@@ -24,10 +27,14 @@ const Team = () => {
           </div>
           <div className="lg:order-1 lg:max-w-[35vw] lg:text-lg lg:flex lg:flex-col lg:gap-2">
             <div>
-              <h2>Danilo Dominguez</h2>
-              <h3>CEO and Founder</h3>
+              <h2>
+                <AnimatedTextSpan parts={2}>Danilo Dominguez</AnimatedTextSpan>
+              </h2>
+              <h3>
+                <AnimatedTextSpan parts={2}>CEO and Founder</AnimatedTextSpan>
+              </h3>
             </div>
-            <p>
+            <p className="fade-in-on-scroll">
               Our founder, Danilo Dominguez, has been dedicating his life to
               better understanding how we can better connect all real estate
               industries. From Real Estate Brokerage to Residential & Commercial
