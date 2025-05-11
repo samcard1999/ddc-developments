@@ -4,7 +4,11 @@ import gsap from "gsap";
 const useFadeInParagraphs = () => {
   useEffect(() => {
     const paragraphs = document.querySelectorAll(".fade-in-on-scroll");
-    const tl = gsap.timeline();
+    // Reiniciar estado visual antes de observar (por si Safari o caché)
+    paragraphs.forEach((p) => {
+      gsap.set(p, { opacity: 0.1 });
+    });
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -13,23 +17,19 @@ const useFadeInParagraphs = () => {
           if (entry.isIntersecting) {
             gsap.to(el, {
               opacity: 1,
-              duration: 1,
+              duration: 0.5,
               ease: "power1.out",
+              overwrite: "auto",
               onComplete: () => observer.unobserve(el)
             });
           }
         });
       },
-      { threshold: 1 }
+      { threshold: 0.5 }
     );
 
-    // Establece opacidad inicial solo si está fuera de viewport
+    // Observar todos los párrafos
     paragraphs.forEach((p) => {
-      const rect = p.getBoundingClientRect();
-      const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-      if (!isVisible) {
-        gsap.set(p, { opacity: 0 });
-      }
       observer.observe(p);
     });
 
