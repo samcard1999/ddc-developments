@@ -13,31 +13,31 @@ const AccordionContainer = () => {
     {
       title: "Modular System",
       answer:
-        "Sunt voluptate anim eiusmod consectetur magna anim sunt ut velit. In officia labore est voluptate officia dolore sunt commodo duis et. Minim amet sint et fugiat incididunt ipsum ex sint do labore veniam. Fugiat magna ea voluptate proident excepteur veniam aliqua esse dolor.",
+        "Our proprietary modular construction system ensures faster execution, higher precision, and superior quality. Each component is prefabricated and assembled with efficiency, reducing construction time and environmental impact—redefining how real estate is developed in Florida.",
       number: "01"
     },
     {
       title: "Augmented Reality",
       answer:
-        "Eiusmod fugiat laborum laborum cupidatat exercitation enim adipisicing exercitation. Sit adipisicing consequat Lorem exercitation ipsum cupidatat eu fugiat qui. Duis duis est cillum exercitation in id est qui laboris. Est enim elit do occaecat voluptate.",
+        "We use Augmented Reality to offer immersive project previews, allowing clients and investors to visualize spaces before construction begins. This technology improves decision-making and creates a stronger emotional connection with every property.",
       number: "02"
     },
     {
       title: "Software BIM",
       answer:
-        "Labore Lorem ex et laboris dolore elit eiusmod dolor esse. Nisi aliqua ea pariatur ipsum anim irure quis anim cupidatat tempor consectetur ut nisi ut. Aute ex nostrud voluptate cillum. Est id proident adipisicing esse aliqua enim est id ullamco qui. Consequat irure adipisicing tempor incididunt in duis quis officia dolor ad excepteur.",
+        "Through BIM (Building Information Modeling), DDC guarantees project accuracy, cost control, and streamlined collaboration. This digital model centralizes architectural, structural, and MEP data—ensuring a smarter, more transparent construction process.",
       number: "03"
     },
     {
       title: "Real Estate Tokenization",
       answer:
-        "Veniam reprehenderit commodo veniam dolor. Et ex labore pariatur sint irure exercitation ex quis. Ex velit elit ad velit commodo veniam magna dolore eu est. Fugiat nisi eu in do.",
+        "We’re pioneering real estate tokenization to democratize access to investment. By converting property value into digital tokens, we make it easier for global investors to participate with transparency, liquidity, and lower entry barriers.",
       number: "04"
     },
     {
       title: "The DDC App",
       answer:
-        "Ex ad anim esse non. Aliquip tempor incididunt est ea veniam. Sint eu veniam velit minim deserunt proident eiusmod enim nulla aliqua incididunt sunt.",
+        "Our mobile app empowers investors to track progress, manage documents, and monitor returns—all in real-time. It’s your direct line to every DDC project, designed to make property investment simple, secure, and accessible.",
       number: "05"
     }
   ];

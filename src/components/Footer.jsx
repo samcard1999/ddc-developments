@@ -92,7 +92,6 @@ const Footer = () => {
             Privacy Policy
           </a>
         </div>
-        <h2 className="hidden lg:block text-9xl font-bold">DDC DEVELOPMENTS</h2>
       </div>
     </footer>
   );

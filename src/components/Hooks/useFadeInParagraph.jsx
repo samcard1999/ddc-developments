@@ -4,27 +4,34 @@ import gsap from "gsap";
 const useFadeInParagraphs = () => {
   useEffect(() => {
     const paragraphs = document.querySelectorAll(".fade-in-on-scroll");
-
-    // Establece opacidad inicial
-    gsap.set(paragraphs, { opacity: 0 });
-
+    const tl = gsap.timeline();
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const el = entry.target;
+
           if (entry.isIntersecting) {
-            gsap.to(entry.target, {
+            gsap.to(el, {
               opacity: 1,
-              duration: 0.7,
-              ease: "power1.out"
+              duration: 1,
+              ease: "power1.out",
+              onComplete: () => observer.unobserve(el)
             });
-            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 1 }
     );
 
-    paragraphs.forEach((p) => observer.observe(p));
+    // Establece opacidad inicial solo si está fuera de viewport
+    paragraphs.forEach((p) => {
+      const rect = p.getBoundingClientRect();
+      const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      if (!isVisible) {
+        gsap.set(p, { opacity: 0 });
+      }
+      observer.observe(p);
+    });
 
     return () => observer.disconnect();
   }, []);

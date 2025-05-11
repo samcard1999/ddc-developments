@@ -11,6 +11,8 @@ import AnimatedBackground from "./Background/Background";
 import Projects2 from "./Projects2";
 import Graphic from "./Graphic";
 import useFadeInParagraphs from "./Hooks/useFadeInParagraph";
+import BentoGrid from "./BentoGrid";
+import DDCComparisonChart from "./DDCComparisonChart";
 
 const Home = ({ isPreloading }) => {
   useFadeInParagraphs();
@@ -26,6 +28,8 @@ const Home = ({ isPreloading }) => {
       <NavBar />
       <Cover />
       <About />
+      <DDCComparisonChart />
+      <BentoGrid />
       {/* <Graphic /> */}
       <Projects2 />
       <Technologies />
