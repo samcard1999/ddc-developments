@@ -5,7 +5,7 @@ import logo_letters from "../assets/svg/logo_letters.svg";
 
 const Cover = () => {
   return (
-    <section className="flex items-center relative full-screen-safe">
+    <section id="cover" className="flex items-center relative full-screen-safe">
       <div className="justify-center gap-12 items-center w-auto h-auto hidden">
         <img
           className="w-auto h-[3vh] absolute -translate-x-[calc(50%+56px)]"
@@ -35,13 +35,13 @@ const Cover = () => {
       </div>
 
       <div className="flex absolute font-bold bottom-5 left-0 px-10 justify-between items-center w-full h-auto pb-[env(safe-area-inset-bottom)]">
-        <a href="/" className="text-inherit hover:underline">
+        <a href="#projects" className="text-inherit hover:underline">
           Projects
         </a>
-        <a href="/" className="text-inherit hover:underline">
+        <a href="#team" className="text-inherit hover:underline">
           Team
         </a>
-        <a href="/" className="text-inherit hover:underline">
+        <a href="#technologies" className="text-inherit hover:underline">
           Technologies
         </a>
       </div>

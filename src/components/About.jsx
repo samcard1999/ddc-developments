@@ -179,12 +179,18 @@ const About = () => {
             per day.
           </h2>
         </div>
-        <div className="flex gap-4 justify-center pb-20 w-full items-center">
-          <h2 className="text-xl font-bold">
-            Start your new
-            <br /> investment now
-          </h2>
-          <img className="h-8" src={send_button} alt="investment_button"></img>
+        <div className="flex justify-center items-center">
+          <a className="flex bg-white_gray rounded-full  content-center py-2 px-6 gap-4 justify-center mb-20 w-fit items-center">
+            <h2 className="text-xl font-bold">
+              Start your new
+              <br /> investment now
+            </h2>
+            <img
+              className="h-8"
+              src={send_button}
+              alt="investment_button"
+            ></img>
+          </a>
         </div>
       </div>
       <div className="flex gap-4 px-6 py-2 justify-between items-center">

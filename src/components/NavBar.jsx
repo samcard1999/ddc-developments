@@ -51,13 +51,18 @@ const NavBar = () => {
         alt="logo-letters"
         className="h-3 hidden lg:block"
       ></img>
-      <img
-        src={logo_circle}
-        alt="logo-circle"
-        className="h-12 lg:absolute lg:left-1/2 lg:translate-x-[-50%]"
-      ></img>
+      <a href="#cover">
+        <img
+          src={logo_circle}
+          alt="logo-circle"
+          className="h-12 lg:absolute lg:left-1/2 lg:translate-x-[-50%]"
+        ></img>
+      </a>
       <div className="text-base text-dark_blue flex  ">
-        <a className="text-inherit hover:te</div>xt-dark_grey mr-4" href="#">
+        <a
+          className="text-inherit hover:te</div>xt-dark_grey mr-4"
+          href="#contact"
+        >
           Contact
         </a>
         <div className="mr-4">|</div>

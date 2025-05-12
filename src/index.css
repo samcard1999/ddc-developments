@@ -56,7 +56,7 @@
 }
 
 html {
-  @apply text-[1rem] xl:text-[1rem] 2xl:text-[1.3rem] 2xl-custom:text-[2.6rem];
+  @apply scroll-smooth text-[1rem] xl:text-[1rem] 2xl:text-[1.3rem] 2xl-custom:text-[2.6rem];
 }
 
 body {

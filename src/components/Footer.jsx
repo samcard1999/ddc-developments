@@ -39,7 +39,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex  items-end pr-4 mb-4 gap-1">
-            <div className="form_wrapper box-content pl-8 py-1 flex flex-col gap-2">
+            <div
+              id="contact"
+              className="form_wrapper box-content pl-8 py-1 flex flex-col gap-2"
+            >
               <h1 className="font-bold">Get in touch</h1>
               <h2 className="font-bold text-xl">Contact us today</h2>
               <p className="text-lg">

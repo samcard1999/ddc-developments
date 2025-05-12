@@ -3,7 +3,7 @@ import AnimatedTextSpan from "./AnimatedText";
 
 const Projects2 = () => {
   return (
-    <section className="h-auto w-full relative overflow-hidden">
+    <section id="projects" className="h-auto w-full relative overflow-hidden">
       <div className="flex flex-col gap-4 ">
         <div className="relative p-6 w-[80%] flex flex-col gap-4">
           <h1 className=" text-6xl text-dark_blue font-bold">
