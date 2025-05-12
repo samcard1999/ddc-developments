@@ -17,7 +17,7 @@ const useFadeInParagraphs = () => {
           if (entry.isIntersecting) {
             gsap.to(el, {
               opacity: 1,
-              duration: 0.5,
+              duration: 0.75,
               ease: "power1.out",
               overwrite: "auto",
               onComplete: () => observer.unobserve(el)
@@ -25,7 +25,7 @@ const useFadeInParagraphs = () => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.7 }
     );
 
     // Observar todos los párrafos

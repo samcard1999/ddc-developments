@@ -1,8 +1,13 @@
-import { useEffect, useRef, memo } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
 
-const AnimatedTextSpan = memo(({ children, parts = 1, className = "" }) => {
+const AnimatedTextSpanRepeatable = ({
+  children,
+  parts = 1,
+  className = "",
+  isActive = true
+}) => {
   const containerRef = useRef(null);
   const splitInstance = useRef(null);
 
@@ -10,7 +15,6 @@ const AnimatedTextSpan = memo(({ children, parts = 1, className = "" }) => {
     const el = containerRef.current;
     if (!el) return;
 
-    // Aplicar SplitType sobre los elementos ya renderizados (incluye <strong>)
     splitInstance.current = new SplitType(el, { types: "words" });
 
     const originalWords = el.querySelectorAll(".word");
@@ -30,12 +34,15 @@ const AnimatedTextSpan = memo(({ children, parts = 1, className = "" }) => {
     });
 
     const animatedWords = el.querySelectorAll(".word");
-
     gsap.set(animatedWords, { y: "100%" });
+
+    let visible = false;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        visible = entry.isIntersecting;
+
+        if (visible && isActive) {
           const groupSize = Math.ceil(animatedWords.length / parts);
           const groups = Array.from({ length: parts }, (_, i) =>
             Array.from(animatedWords).slice(i * groupSize, (i + 1) * groupSize)
@@ -47,11 +54,12 @@ const AnimatedTextSpan = memo(({ children, parts = 1, className = "" }) => {
               ease: "power4.out",
               duration: 0.8,
               stagger: 0.1,
-              delay: index * 0.3
+              delay: index * 0.3,
+              overwrite: "auto"
             });
           });
-
-          observer.unobserve(entry.target);
+        } else {
+          gsap.to(animatedWords, { y: "100%", duration: 0.1 });
         }
       },
       { threshold: 0.5 }
@@ -63,7 +71,7 @@ const AnimatedTextSpan = memo(({ children, parts = 1, className = "" }) => {
       observer.disconnect();
       splitInstance.current?.revert?.();
     };
-  }, []);
+  }, [children, parts, isActive]);
 
   return (
     <span
@@ -73,6 +81,6 @@ const AnimatedTextSpan = memo(({ children, parts = 1, className = "" }) => {
       {children}
     </span>
   );
-});
+};
 
-export default AnimatedTextSpan;
+export default AnimatedTextSpanRepeatable;

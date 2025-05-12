@@ -3,7 +3,7 @@ import AnimatedTextSpan from "./AnimatedText";
 
 const Projects2 = () => {
   return (
-    <section className="h-screen w-full relative overflow-hidden">
+    <section className="h-auto w-full relative overflow-hidden">
       <div className="flex flex-col gap-4 ">
         <div className="relative p-6 w-[80%] flex flex-col gap-4">
           <h1 className=" text-6xl text-dark_blue font-bold">
@@ -43,7 +43,7 @@ const Projects2 = () => {
             </span>
           </a>
         </div>
-        <div className="projects_carousel fade-in-on-scroll h-[38vh] relative flex overflow-x-auto  w-screen gap-2 origin-bottom-left ">
+        <div className="projects_carousel fade-in-on-scroll h-full relative flex overflow-x-auto  w-screen gap-2 origin-bottom-left ">
           <a className="carousel_card relative flex flex-col snap-start p-2 scroll-ms-6 bg-white_gray rounded-xl">
             <img
               alt="bg_1"

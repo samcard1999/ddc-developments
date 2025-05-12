@@ -38,40 +38,42 @@ const Footer = () => {
               <a href="https://www.youtube.com/@DDC.Developments">Youtube</a>
             </div>
           </div>
-          <div className="form_wrapper box-content px-8 py-1 flex flex-col gap-2">
-            <h1 className="font-bold">Get in touch</h1>
-            <h2 className="font-bold text-xl">Contact us today</h2>
-            <p className="text-lg">
-              Reach out to us for all your construction and real estate
-              development queries. Let's build a successful partnership
-              together.
-            </p>
-            <div className="gap-1 flex flex-col lg:w-1/2">
-              <h3>Name</h3>
-              <input placeholder="Jane Smith"></input>
-            </div>
-            <div className="gap-1 flex flex-col lg:w-1/2">
-              <h3>Email address</h3>
-              <input placeholder="youremail@example.com"></input>
-            </div>
-            <div className="gap-1 flex flex-col lg:w-1/2">
-              <h3>Phone number</h3>
-              <input placeholder="305-555-1234"></input>
-            </div>
-            <div className="gap-1 flex flex-col">
-              <h3>Message</h3>
-              <div className="flex flex-col items-end justify-normal">
-                <textarea
-                  className="w-full"
-                  placeholder="Text a message"
-                ></textarea>
-                <img
-                  className="w-auto h-10 mr-[-1rem] mt-[-1rem] z-10"
-                  src={send_button}
-                  alt="send_button"
-                ></img>
+          <div className="flex  items-end pr-4 mb-4 gap-1">
+            <div className="form_wrapper box-content pl-8 py-1 flex flex-col gap-2">
+              <h1 className="font-bold">Get in touch</h1>
+              <h2 className="font-bold text-xl">Contact us today</h2>
+              <p className="text-lg">
+                Reach out to us for all your construction and real estate
+                development queries. Let's build a successful partnership
+                together.
+              </p>
+              <div className="gap-1 flex flex-col lg:w-1/2">
+                <h3>Name</h3>
+                <input placeholder="Jane Smith"></input>
+              </div>
+              <div className="gap-1 flex flex-col lg:w-1/2">
+                <h3>Email address</h3>
+                <input placeholder="youremail@example.com"></input>
+              </div>
+              <div className="gap-1 flex flex-col lg:w-1/2">
+                <h3>Phone number</h3>
+                <input placeholder="305-555-1234"></input>
+              </div>
+              <div className="gap-1 flex flex-col">
+                <h3>Message</h3>
+                <div className="flex  items-end justify-center">
+                  <textarea
+                    className="w-full"
+                    placeholder="Text a message"
+                  ></textarea>
+                </div>
               </div>
             </div>
+            <img
+              className="w-auto h-10 z-10 mb-2"
+              src={send_button}
+              alt="send_button"
+            ></img>
           </div>
           <div className="lg:hidden border-t border-dark_blue footer_banner relative w-full px-4 py-2 bottom-0 flex justify-between items-center">
             <a href="/">

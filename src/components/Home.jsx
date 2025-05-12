@@ -28,8 +28,8 @@ const Home = ({ isPreloading }) => {
       <NavBar />
       <Cover />
       <About />
-      <DDCComparisonChart />
-      <BentoGrid />
+      {/* <DDCComparisonChart />
+      <BentoGrid /> */}
       {/* <Graphic /> */}
       <Projects2 />
       <Technologies />

@@ -67,37 +67,40 @@ const AccordionContainer = () => {
     }, 5000);
   };
 
-  // Configura el Intersection Observer
   useEffect(() => {
+    let hasAutoplayStarted = false;
+
     const observerCallback = (entries) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
-        // Si el contenedor está en el viewport, activa el autoplay
+        if (!hasAutoplayStarted) {
+          setOpenAccordion(0); // abre el primer acordeón una sola vez
+          hasAutoplayStarted = true;
+        }
+
         autoplayRef.current = true;
         autoplay();
       } else {
-        // Si el contenedor sale del viewport, pausa el autoplay
         autoplayRef.current = false;
-        clearInterval(intervalRef.current); // Limpia el autoplay
+        clearInterval(intervalRef.current);
       }
     };
 
     observerRef.current = new IntersectionObserver(observerCallback, {
-      root: null, // Usa el viewport como referencia
-      threshold: 0.1 // Activa cuando el 10% del contenedor sea visible
+      root: null,
+      threshold: 0.6 // Se activa cuando el 60% del contenedor está visible
     });
 
     if (containerRef.current) {
       observerRef.current.observe(containerRef.current);
     }
 
-    // Limpia el observer y los temporizadores al desmontar el componente
     return () => {
       if (observerRef.current && containerRef.current) {
         observerRef.current.unobserve(containerRef.current);
       }
-      clearTimeout(timeoutRef.current); // Limpia el timeout
-      clearInterval(intervalRef.current); // Limpia el intervalo
+      clearTimeout(timeoutRef.current);
+      clearInterval(intervalRef.current);
     };
   }, []);
 

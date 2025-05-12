@@ -1,6 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "swiper/css";
+
+.swiper-slide-active {
+  transition: opacity 0.8s, filter 0.8s, transform 0.8s;
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.swiper-3d,
+.swiper-3d.swiper-css-mode .swiper-wrapper {
+  perspective: 1500px;
+}
+
+.swiper-slide-active .image_container {
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide-prev .image_container,
+.swiper-slide-next .image_container {
+  transform: translateY(-8rem);
+  transition: transform 0.7s ease;
+}
 
 @font-face {
   font-family: "Noirden";
@@ -199,7 +221,7 @@ textarea {
   @apply font-light;
 }
 .image_container {
-  mask-image: linear-gradient(black 50%, transparent);
+  mask-image: linear-gradient(black 70%, transparent);
 }
 
 #header {

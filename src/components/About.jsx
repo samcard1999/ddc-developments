@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import send_button from "../assets/svg/send_button.svg";
 import HeadlineSplitText from "./AnimatedText";
 import AnimatedTextSpan from "./AnimatedText";
+import BentoStatCard from "./BentoStatCard";
 
 const About = () => {
   const statistic_1 = useRef(null);
@@ -185,6 +186,10 @@ const About = () => {
           </h2>
           <img className="h-8" src={send_button} alt="investment_button"></img>
         </div>
+      </div>
+      <div className="flex gap-4 px-6 py-2 justify-between items-center">
+        <BentoStatCard number={300} prefix="+" label="Houses" />
+        <BentoStatCard number={300} prefix="+" label="Houses" />
       </div>
     </section>
   );
