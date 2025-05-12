@@ -12,8 +12,8 @@ const Projects2 = () => {
             </AnimatedTextSpan>
           </h1>
           <h2 className="text-xl text-dark_blue fade-in-on-scroll">
-            We convert designs into reality through innovative methods and
-            modular construction.
+            We convert designs into reality through innovative the modular
+            construction method.
           </h2>
           <a href="/" className="rounded-full py-4 px-6 bg-white_gray w-fit">
             <span className="flex items-center">
