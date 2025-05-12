@@ -6,6 +6,8 @@ import send_button from "../assets/svg/send_button.svg";
 import HeadlineSplitText from "./AnimatedText";
 import AnimatedTextSpan from "./AnimatedText";
 import BentoStatCard from "./BentoStatCard";
+import CountUp from "react-countup";
+import CountUpOnVisible from "./CountUpOnVisible";
 
 const About = () => {
   const statistic_1 = useRef(null);
@@ -17,28 +19,33 @@ const About = () => {
       gsap.from(element, {
         scrollTrigger: {
           trigger: element, // Cada elemento será su propio trigger
-          start: "-120px bottom",
+          start: "240px bottom",
           end: "bottom+=250px bottom",
-          scrub: true,
-          toggleActions: "play none play none"
+          scrub: false,
+          toggleActions: "play none none none"
         },
-        right: "300px",
+        right: "200px",
+        filter: "blur(10px)",
         opacity: 0.1,
-        duration: 1.4
+        duration: 1,
+        ease: "power1.inOut"
       });
     });
     gsap.utils.toArray(".statistic_2").forEach((element) => {
       gsap.from(element, {
         scrollTrigger: {
           trigger: element, // Cada elemento será su propio trigger
-          start: "-120px bottom",
+          start: "240px bottom",
           end: "bottom+=250px bottom",
-          scrub: true,
+          scrub: false,
+
           toggleActions: "play none play none"
         },
-        left: "300px",
+        left: "200px",
+        filter: "blur(10px)",
         opacity: 0.1,
-        duration: 1.4
+        duration: 1,
+        ease: "power1.inOut"
       });
     });
   }, []);
@@ -64,21 +71,6 @@ const About = () => {
       </span>
     );
   }
-
-  const phrases = [
-    "At DDC Developments, we are",
-    " dedicated to transforming the ",
-    "construction industry with a strong ",
-    "commitment to environmental ",
-    "responsibility. By leveraging cutting-",
-    "edge technologies like our modular ",
-    "systems, we offer innovative and",
-    " sustainable solutions that redefine",
-    " efficiency and performance. Our ",
-    "disruptive approach positions us as an",
-    " industry leader, driving progress and",
-    " shaping the future of construction."
-  ];
 
   return (
     <section
@@ -107,7 +99,7 @@ const About = () => {
           className="bg-dark_blue rounded-full h-auto relative hidden lg:block"
         ></div>
         <div className="flex-1 relative flex gap-4 justify-center items-center ml-4">
-          <p className="flex-1 relative  text-right text-xl font-light lg:text-left fade-in-on-scroll">
+          <p className="flex-1 relative tracking-wider text-right text-lg  font-light lg:text-left fade-in-on-scroll">
             At DDC Developments, we are dedicated to transforming the
             construction industry with a strong commitment to environmental
             responsibility. By leveraging cutting- edge technologies like our
@@ -129,14 +121,26 @@ const About = () => {
             className="bg-dark_blue rounded-full relative "
           ></div>
           <h2>
-            More than <b>300</b>
+            More than{" "}
+            <b>
+              <CountUpOnVisible start={200} end={300} duration={2} />
+            </b>
             <br /> properties.
           </h2>
         </div>
         <div className="statistic_2 flex pr-10 items-center gap-4  justify-end text-right relative">
           <h2>
-            More than <b>$ 800.000.000</b>
-            <br /> investments in projects.
+            +
+            <b>
+              {" "}
+              <CountUpOnVisible
+                prefix={"$"}
+                start={700000000}
+                end={800000000}
+                duration={2}
+              />
+            </b>
+            <br /> Investments in projects.
           </h2>
           <div
             style={{ height: "6vh", width: "5px" }}
@@ -172,7 +176,10 @@ const About = () => {
           <h2>
             <b>Modular construction</b> with
             <br />
-            power to manufacture <b>40 properties</b>
+            power to manufacture{" "}
+            <b>
+              <CountUpOnVisible end={40} start={20} duration={2} /> properties
+            </b>
             <br />
             per day and build <b>2500 sq.ft</b> of perimeter
             <br />
@@ -192,10 +199,6 @@ const About = () => {
             ></img>
           </a>
         </div>
-      </div>
-      <div className="flex gap-4 px-6 py-2 justify-between items-center">
-        <BentoStatCard number={300} prefix="+" label="Houses" />
-        <BentoStatCard number={300} prefix="+" label="Houses" />
       </div>
     </section>
   );

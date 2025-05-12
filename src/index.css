@@ -273,7 +273,7 @@ polygon {
 
 .statistic_1,
 .statistic_2 {
-  @apply lg:text-xl;
+  @apply lg:text-xl text-2xl;
 }
 
 .project_card {
