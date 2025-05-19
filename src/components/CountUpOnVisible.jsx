@@ -34,7 +34,7 @@ const CountUpOnVisible = ({
         }
       },
       {
-        threshold: 0.5 // Ajusta según cuándo quieras disparar la animación
+        threshold: 0.8 // Ajusta según cuándo quieras disparar la animación
       }
     );
 

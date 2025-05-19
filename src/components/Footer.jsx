@@ -21,7 +21,10 @@ const Footer = () => {
             </div>
             <div className="w-full">
               <h3>Address</h3>
-              <a href="https://maps.app.goo.gl/5MWU4AVmGP8TjggM8">
+              <a
+                href="https://maps.app.goo.gl/5MWU4AVmGP8TjggM8"
+                className="text-sm"
+              >
                 3470 NW 82nd Ave, Suite 790
               </a>
             </div>
@@ -45,35 +48,44 @@ const Footer = () => {
             >
               <h1 className="font-bold">Get in touch</h1>
               <h2 className="font-bold text-xl">Contact us today</h2>
-              <p className="text-lg">
+              <p className="text-sm">
                 Reach out to us for all your construction and real estate
                 development queries. Let's build a successful partnership
                 together.
               </p>
               <div className="gap-1 flex flex-col lg:w-1/2">
                 <h3>Name</h3>
-                <input placeholder="Jane Smith"></input>
+                <input
+                  placeholder="Jane Smith"
+                  className="placeholder:pl-1 text-sm"
+                ></input>
               </div>
               <div className="gap-1 flex flex-col lg:w-1/2">
                 <h3>Email address</h3>
-                <input placeholder="youremail@example.com"></input>
+                <input
+                  placeholder="youremail@example.com"
+                  className="placeholder:pl-1 text-sm"
+                ></input>
               </div>
               <div className="gap-1 flex flex-col lg:w-1/2">
                 <h3>Phone number</h3>
-                <input placeholder="305-555-1234"></input>
+                <input
+                  placeholder="305-555-1234"
+                  className="placeholder:pl-1 text-sm"
+                ></input>
               </div>
               <div className="gap-1 flex flex-col">
                 <h3>Message</h3>
                 <div className="flex  items-end justify-center">
                   <textarea
-                    className="w-full"
+                    className="w-full placeholder:pl-1 text-sm resize-none"
                     placeholder="Text a message"
                   ></textarea>
                 </div>
               </div>
             </div>
             <img
-              className="w-auto h-10 z-10 mb-2"
+              className="w-auto h-10 z-10 mb-2 lg:h-7"
               src={send_button}
               alt="send_button"
             ></img>

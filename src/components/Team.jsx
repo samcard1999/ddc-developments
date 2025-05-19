@@ -15,7 +15,7 @@ const employees = [
     description:
       "Our CEO, Danilo Dominguez, has been dedicating his life to better understanding how we can better connect all real estate industries. From Real Estate Brokerage to Residential & Commercial construction. For him, it's all about the clients' experiences.",
     image: "assets/employees/danilo1.png",
-    class: "mt-20 scale-110 translate-x-6"
+    class: "translate-x-4"
   },
   {
     name: "Danilo Dominguez Catasus",
@@ -32,6 +32,22 @@ const employees = [
     image: "assets/employees/israel.png"
   },
   {
+    name: "Yiseny Anzola",
+    role: "Sales Director",
+    description:
+      "Yiseny turns interest into ownership. Grounded in Miami’s fast-moving market, she guides buyers and investors from first inquiry to closing, making every step clear and efficient. Her proactive approach and personable style ensure each transaction reflects the distinction, prestige, and quality that define DDC.",
+    image: "assets/employees/yiseny.png",
+    class: ""
+  },
+  // {
+  //   name: "Alex Olivares",
+  //   role: "Senior General Contractor",
+  //   description:
+  //     "Alex is the on‑site force behind DDC’s precision builds. Drawing on deep field experience, he orchestrates crews, suppliers, and safety protocols so our modular structures rise flawlessly. His eye for detail and proactive problem‑solving keep timelines tight and quality uncompromised—delivering the craft clients expect.",
+  //   image: "assets/employees/alex.png",
+  //   class: ""
+  // },
+  {
     name: "Alejandro Fonticoba",
     role: "Project Manager",
     description:
@@ -46,6 +62,14 @@ const employees = [
       "Javi turns ideas into stories people remember. Using clear data and fresh creativity, he builds campaigns that show why DDC’s modular projects stand out. From a social-post to an investor pitch, he keeps every detail polished so clients and partners feel the distinction and quality that define DDC.",
     image: "assets/employees/javi.png",
     class: "scale-[1.2] -translate-y-12"
+  },
+  {
+    name: "Wilfredo Alvarado",
+    role: "Creative Director",
+    description:
+      "Wilfredo turns concepts into immersive realities. As the mind behind DDC’s photorealistic renders, augmented-reality previews, and graphic identity, he lets clients walk through a project—feel its light, materials, and flow—long before construction begins, elevating every decision with clarity, beauty, and technical precision.",
+    image: "assets/employees/wilfredo.png",
+    class: ""
   }
 ];
 

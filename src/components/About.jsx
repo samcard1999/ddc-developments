@@ -8,6 +8,7 @@ import AnimatedTextSpan from "./AnimatedText";
 import BentoStatCard from "./BentoStatCard";
 import CountUp from "react-countup";
 import CountUpOnVisible from "./CountUpOnVisible";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const statistic_1 = useRef(null);
@@ -78,21 +79,16 @@ const About = () => {
       className="w-full flex flex-col gap-28 h-auto relative overflow-hidden"
     >
       <div className="flex flex-col lg:flex-row lg:px-32 justify-center items-stretch mt-32 gap-20 lg:gap-12">
-        <h1 className="flex-1 mb-8 mr-10  lg:top-0 lg:mr-0 lg:mb-0 lg:leading-[0.7] w-auto font-bold text-right relative  text-7xl leading-[1.1] ">
-          <b className="hidden lg:inline text-5xl">The future is</b>
-          {/* <b className="lg:hidden">The future </b>
-          <span className="lg:hidden font-bold">
-            {" "}
-            is not
-            <br /> Waited
-          </span> */}
-          <AnimatedTextSpan parts={2}>
-            The future is not Waited
-          </AnimatedTextSpan>
-          <span className="hidden font-bold lg:inline text-5xl">
+        <h1 className="flex-1 mb-8 mr-10 lg:content-center lg:top-0 lg:mr-0 lg:mb-0 lg:leading-[0.7] w-auto font-bold text-right relative  text-7xl leading-[1.1] ">
+          <AnimatedTextSpan parts={2} className="hidden lg:inline text-5xl ">
+            The future is
             <br /> not Waited, it is
             <br /> built
-          </span>
+          </AnimatedTextSpan>
+
+          <AnimatedTextSpan className="lg:hidden" parts={2}>
+            The future is not Waited
+          </AnimatedTextSpan>
         </h1>
         <div
           style={{ width: "6px" }}
@@ -114,22 +110,14 @@ const About = () => {
           ></div>
         </div>
       </div>
-      <div className="flex flex-col gap-28 ">
-        <div className="statistic_1 flex pl-10 items-center gap-4 relative">
-          <div
-            style={{ height: "6vh", width: "5px" }}
-            className="bg-dark_blue rounded-full relative "
-          ></div>
-          <h2>
-            More than{" "}
-            <b>
-              <CountUpOnVisible start={200} end={300} duration={2} />
-            </b>
-            <br /> properties.
-          </h2>
-        </div>
-        <div className="statistic_2 flex pr-10 items-center gap-4  justify-end text-right relative">
-          <h2>
+      <div className="flex flex-col gap-3 px-4 ">
+        <div className="statistic_2 bento_card flex flex-col pr-10 items-center gap-4  justify-end text-right relative">
+          <img
+            src="assets/about/investments.png"
+            alt="investments.png"
+            className="w-full h-full object-contain"
+          />
+          <h2 className="text-left">
             +
             <b>
               {" "}
@@ -142,63 +130,52 @@ const About = () => {
             </b>
             <br /> Investments in projects.
           </h2>
-          <div
-            style={{ height: "6vh", width: "5px" }}
-            className="bg-dark_blue rounded-full relative "
-          ></div>
         </div>
-        <div className=" statistic_1 relative flex pl-10 items-center gap-4 ">
-          <div
-            style={{ height: "6vh", width: "5px" }}
-            className="bg-dark_blue rounded-full relative "
-          ></div>
+        <div className=" statistic_1 bento_card relative flex pl-10 items-center gap-4 ">
+          <h2>
+            <b>Modular construction</b> with
+            <br />
+            power to manufacture{" "}
+            <b>
+              <CountUpOnVisible end={40} start={0} duration={2.3} /> properties
+            </b>
+            <br />
+            per day and build{" "}
+            <b>
+              <CountUpOnVisible end={2500} start={2000} duration={2.3} />
+            </b>{" "}
+            of perimeter
+            <br />
+            per day.
+          </h2>
+        </div>
+        <div className=" statistic_1 bento_card relative flex pl-10 items-center gap-4 ">
           <h2>
             In house manufacture <br />
             <b>facility </b>
             in Florida
           </h2>
         </div>
-        <div className=" statistic_2 relative flex pr-10 items-center gap-4  justify-end text-right">
+        <div className="statistic_1 bento_card flex pl-10 items-center gap-4 relative">
           <h2>
-            <b>Investment</b>
-            <br /> Platform.
-          </h2>
-          <div
-            style={{ height: "6vh", width: "5px" }}
-            className="bg-dark_blue rounded-full relative "
-          ></div>
-        </div>
-        <div className=" statistic_1 relative flex pl-10 items-center gap-4 ">
-          <div
-            style={{ height: "6vh", width: "5px" }}
-            className="bg-dark_blue rounded-full relative "
-          ></div>
-          <h2>
-            <b>Modular construction</b> with
-            <br />
-            power to manufacture{" "}
+            More than{" "}
             <b>
-              <CountUpOnVisible end={40} start={20} duration={2} /> properties
-            </b>
-            <br />
-            per day and build <b>2500 sq.ft</b> of perimeter
-            <br />
-            per day.
+              <CountUpOnVisible start={200} end={300} duration={2} />
+            </b>{" "}
+            properties.
           </h2>
         </div>
-        <div className="flex justify-center items-center">
-          <a className="flex bg-white_gray rounded-full  content-center py-2 px-6 gap-4 justify-center mb-20 w-fit items-center">
-            <h2 className="text-xl font-bold">
-              Start your new
-              <br /> investment now
-            </h2>
-            <img
-              className="h-8"
-              src={send_button}
-              alt="investment_button"
-            ></img>
-          </a>
-        </div>
+
+        <Link
+          to={"/investments"}
+          className="flex !bg-[#0f1932] bento_card w-full content-center py-2 px-6 gap-4 !justify-between mb-20 !items-center"
+        >
+          <h2 className="text-xl text-white_gray font-bold">
+            Start your new
+            <br /> investment now
+          </h2>
+          <img className="h-8" src={send_button} alt="investment_button"></img>
+        </Link>
       </div>
     </section>
   );

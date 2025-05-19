@@ -55,7 +55,7 @@ const NavBar = () => {
         <img
           src={logo_circle}
           alt="logo-circle"
-          className="h-12 lg:absolute lg:left-1/2 lg:translate-x-[-50%]"
+          className="h-12 lg:absolute lg:left-1/2 lg:translate-x-[-50%] lg:top-[1.3rem]"
         ></img>
       </a>
       <div className="text-base text-dark_blue flex  ">

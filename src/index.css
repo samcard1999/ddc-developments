@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "swiper/css";
 
 .swiper-slide-active {
   transition: opacity 0.8s, filter 0.8s, transform 0.8s;
@@ -15,14 +14,21 @@
 }
 
 .swiper-slide-active .image_container {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, scale 0.3s ease;
 }
 
 .swiper-slide-prev .image_container,
 .swiper-slide-next .image_container {
   transform: translateY(-8rem);
-  transition: transform 0.7s ease;
+  transition: transform 0.7s ease, scale 0.3s ease;
 }
+
+/* .swiper-slide-prev .image_container {
+  transform: translateY(5rem, -4rem);
+}
+.swiper-slide-next .image_container {
+  transform: translateY(-5rem, -4rem);
+} */
 
 @font-face {
   font-family: "Noirden";
@@ -63,7 +69,7 @@ body {
   margin: 0;
 
   width: 100%;
-  min-height: 400vh;
+  min-height: 100vh;
   /* background-image: url("./assets/background.png"); */
   background-size: cover;
   background-position: center;
@@ -167,7 +173,7 @@ button:focus-visible {
 }
 
 .contact_wrapper a {
-  @apply text-dark_blue text-lg;
+  @apply text-dark_blue text-sm;
 }
 
 .contact_wrapper h3 {
@@ -323,4 +329,17 @@ polygon {
   min-height: 100dvh;
   padding-bottom: env(safe-area-inset-bottom);
   padding-top: env(safe-area-inset-top);
+}
+
+.cards_container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.desktop_roject_card {
+  @apply absolute w-full h-full top-0 left-0 flex flex-col p-2 bg-white_gray rounded-xl;
+}
+
+.bento_card {
+  @apply rounded-3xl bg-[#606060] bg-opacity-30 backdrop-blur-lg p-6 items-start justify-start;
 }

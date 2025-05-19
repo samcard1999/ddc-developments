@@ -67,14 +67,14 @@ const Accordion = ({ title, answer, number, isOpen, onToggle }) => {
         <div className="flex items-end">
           <span
             className={`text-xl pb-1 mr-[-.1rem] transition-all duration-700 ease-in-out ${
-              isOpen ? "opacity-100" : "opacity-65"
+              isOpen ? "opacity-100" : "opacity-45"
             }`}
           >
             <b>{title}</b>
           </span>
           <span
             className={`text-[3.5rem] transition-all duration-700 ease-in-out ${
-              isOpen ? "opacity-100" : "opacity-65"
+              isOpen ? "opacity-100" : "opacity-45"
             }`}
           >
             <b>{number}</b>
@@ -91,22 +91,22 @@ const Accordion = ({ title, answer, number, isOpen, onToggle }) => {
 
         <div className="lg:hidden overflow-hidden flex items-center justify-center mt-4">
           <img
-            src={`assets/technologies/bg__${number}.jpeg`}
-            alt={`${number}.jpeg`}
+            src={`assets/technologies/bg__${number}.webp`}
+            alt={`${number}.webp`}
             className={`object-cover overflow-hidden ${
               isOpen ? "max-h-none" : "max-h-0"
-            } w-[75vw] h-[75vw] rounded-xl`}
+            } w-[75vw] h-[75vw] rounded-xl object-contain`}
           />
         </div>
       </div>
 
       <div className="hidden lg:block absolute lg:left-1/2 lg:top-[20%]">
         <img
-          src={`assets/technologies/bg__${number}.jpeg`}
-          alt={`${number}.jpeg`}
+          src={`assets/technologies/bg__${number}.webp`}
+          alt={`${number}.webp`}
           className={`object-cover overflow-hidden w-[24vw] h-[24vw] ${
             isOpen ? "opacity-100" : "opacity-0"
-          } transition-opacity duration-700`}
+          } transition-opacity duration-700 object-fill`}
         />
       </div>
     </div>

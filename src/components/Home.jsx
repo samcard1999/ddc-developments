@@ -13,8 +13,11 @@ import Graphic from "./Graphic";
 import useFadeInParagraphs from "./Hooks/useFadeInParagraph";
 import BentoGrid from "./BentoGrid";
 import DDCComparisonChart from "./DDCComparisonChart";
+import ProjectsDesktop from "./ProjectsDesktop";
+import { useMediaQuery } from "@react-hook/media-query";
 
 const Home = ({ isPreloading }) => {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   useFadeInParagraphs();
   return (
     <div
@@ -25,13 +28,13 @@ const Home = ({ isPreloading }) => {
         overflow: "hidden"
       }}
     >
-      <NavBar />
       <Cover />
       <About />
       {/* <DDCComparisonChart />
       <BentoGrid /> */}
       {/* <Graphic /> */}
-      <Projects2 />
+      {isMobile ? <Projects2 /> : <ProjectsDesktop />}
+
       <Technologies />
       <Testimonials />
       <Team />
