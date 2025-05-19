@@ -11,6 +11,7 @@ import Investments from "./components/Investments";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useMediaQuery } from "@react-hook/media-query";
 import Investments_mobile from "./components/Investments_mobile";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [isPreloading, setIsPreloading] = useState(true); // Estado para manejar la visibilidad del preloader
@@ -28,6 +29,7 @@ function App() {
     <ReactLenis options={{ duration: 0.9 }} root>
       <AnimatedBackground />
       <Router>
+        <ScrollToTop />
         <NavBar />
         <Routes>
           <Route path="/" element={<Home isPreloading={isPreloading} />} />

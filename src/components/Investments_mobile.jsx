@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import CountUpOnVisible from "./CountUpOnVisible";
 
 const Investments_mobile = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -61,7 +62,10 @@ const Investments_mobile = () => {
             alt="ROI.svg"
             src="assets/investments/ROI.svg"
           />
-          <h1 className="font-bold text-6xl text-dark_blue">30%</h1>
+          <h1 className="font-bold text-6xl text-dark_blue">
+            {" "}
+            <CountUpOnVisible end={30} start={0} duration={2.7} />%
+          </h1>
           <h2 className="font-bold">Lower Costs - Maximized ROI</h2>
         </div>
         <div className="animated_2 bento_card flex flex-col gap-6 ">

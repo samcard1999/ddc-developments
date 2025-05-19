@@ -91,7 +91,7 @@ const Accordion = ({ title, answer, number, isOpen, onToggle }) => {
 
         <div className="lg:hidden overflow-hidden flex items-center justify-center mt-4">
           <img
-            src={`assets/technologies/bg__${number}.webp`}
+            src={`assets/technologies/bg__${number}.gif`}
             alt={`${number}.webp`}
             className={`object-cover overflow-hidden ${
               isOpen ? "max-h-none" : "max-h-0"
@@ -102,7 +102,7 @@ const Accordion = ({ title, answer, number, isOpen, onToggle }) => {
 
       <div className="hidden lg:block absolute lg:left-1/2 lg:top-[20%]">
         <img
-          src={`assets/technologies/bg__${number}.webp`}
+          src={`assets/technologies/bg__${number}.gif`}
           alt={`${number}.webp`}
           className={`object-cover overflow-hidden w-auto h-[60vh] ${
             isOpen ? "opacity-100" : "opacity-0"
