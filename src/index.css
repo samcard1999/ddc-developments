@@ -341,5 +341,5 @@ polygon {
 }
 
 .bento_card {
-  @apply rounded-3xl bg-[#606060] bg-opacity-30 backdrop-blur-lg p-6 items-start justify-start;
+  @apply rounded-3xl bg-[#606060] bg-opacity-25 backdrop-blur-lg p-6 items-start justify-start;
 }
