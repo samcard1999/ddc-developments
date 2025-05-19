@@ -110,72 +110,115 @@ const About = () => {
           ></div>
         </div>
       </div>
-      <div className="flex flex-col gap-3 px-4 ">
-        <div className="statistic_2 bento_card flex flex-col pr-10 items-center gap-4  justify-end text-right relative">
-          <img
-            src="assets/about/investments.png"
-            alt="investments.png"
-            className="w-full h-full object-contain"
-          />
-          <h2 className="text-left">
-            +
-            <b>
-              {" "}
-              <CountUpOnVisible
-                prefix={"$"}
-                start={700000000}
-                end={800000000}
-                duration={2}
-              />
-            </b>
-            <br /> Investments in projects.
-          </h2>
-        </div>
-        <div className=" statistic_1 bento_card relative flex pl-10 items-center gap-4 ">
-          <h2>
-            <b>Modular construction</b> with
-            <br />
-            power to manufacture{" "}
-            <b>
-              <CountUpOnVisible end={40} start={0} duration={2.3} /> properties
-            </b>
-            <br />
-            per day and build{" "}
-            <b>
-              <CountUpOnVisible end={2500} start={2000} duration={2.3} />
-            </b>{" "}
-            of perimeter
-            <br />
-            per day.
-          </h2>
-        </div>
-        <div className=" statistic_1 bento_card relative flex pl-10 items-center gap-4 ">
-          <h2>
-            In house manufacture <br />
-            <b>facility </b>
-            in Florida
-          </h2>
-        </div>
-        <div className="statistic_1 bento_card flex pl-10 items-center gap-4 relative">
-          <h2>
-            More than{" "}
-            <b>
-              <CountUpOnVisible start={200} end={300} duration={2} />
-            </b>{" "}
-            properties.
-          </h2>
-        </div>
+      <div className="lg:flex lg:gap-3 lg:px-24">
+        <div className="flex flex-col gap-3 px-4 lg:w-[60%] h-full">
+          <div className="lg:hidden statistic_2 bento_card flex flex-col pr-10 items-center gap-4  justify-end text-right relative">
+            <img
+              src="assets/about/investments.png"
+              alt="investments.png"
+              className="w-full h-full object-contain"
+            />
+            <h2 className="text-left">
+              +
+              <b>
+                {" "}
+                <CountUpOnVisible
+                  prefix={"$"}
+                  start={700000000}
+                  end={800000000}
+                  duration={2}
+                />
+              </b>
+              <br /> Investments in projects.
+            </h2>
+          </div>
+          <div className=" statistic_1 bento_card relative flex pl-10 items-center gap-4 ">
+            <h2 className="lg:!text-4xl">
+              <b>Modular construction</b> with
+              <br />
+              power to manufacture{" "}
+              <b>
+                <CountUpOnVisible end={40} start={0} duration={2.3} />{" "}
+                properties
+              </b>
+              <br />
+              per day and build{" "}
+              <b>
+                <CountUpOnVisible end={2500} start={2000} duration={2.3} />
+              </b>{" "}
+              of perimeter
+              <br />
+              per day.
+            </h2>
+          </div>
+          <div className=" statistic_2 bento_card relative flex pl-10 items-center gap-4 ">
+            <h2 className="lg:!text-4xl">
+              In house manufacture <br />
+              <b>facility </b>
+              in Florida
+            </h2>
+          </div>
+          <div className="statistic_1 bento_card flex pl-10 items-center gap-4 relative">
+            <h2 className="lg:!text-4xl">
+              More than{" "}
+              <b>
+                <CountUpOnVisible start={200} end={300} duration={2} />
+              </b>{" "}
+              properties.
+            </h2>
+          </div>
 
-        <Link
-          to={"/investments"}
-          className="flex !bg-[#0f1932] bento_card w-full content-center py-2 px-6 gap-4 !justify-between mb-20 !items-center"
-        >
-          <h2 className="text-xl text-white_gray font-bold">
-            Start your new
-            <br /> investment now
-          </h2>
-          <img className="h-8" src={send_button} alt="investment_button"></img>
-        </Link>
+          <Link
+            to={"/investments"}
+            className="lg:hidden flex !bg-[#0f1932] bento_card w-full content-center py-2 px-6 gap-4 !justify-between mb-20 !items-center"
+          >
+            <h2 className="text-xl text-white_gray font-bold">
+              Start your new
+              <br /> investment now
+            </h2>
+            <img
+              className="h-8"
+              src={send_button}
+              alt="investment_button"
+            ></img>
+          </Link>
+        </div>
+        <div className="hidden lg:flex lg:flex-col lg:gap-3 lg:w-[40%]">
+          <div className="hidden statistic_2 bento_card lg:flex flex-col pr-10 items-center gap-4  justify-end text-right relative">
+            <img
+              src="assets/about/investments.png"
+              alt="investments.png"
+              className="w-full h-full object-contain"
+            />
+            <h2 className="text-left">
+              +
+              <b>
+                {" "}
+                <CountUpOnVisible
+                  prefix={"$"}
+                  start={700000000}
+                  end={800000000}
+                  duration={2}
+                />
+              </b>
+              <br /> Investments in projects.
+            </h2>
+          </div>
+          <Link
+            to={"/investments"}
+            className="hidden lg:flex !bg-[#0f1932] bento_card w-full content-center py-2 px-6 gap-4 !justify-between mb-20 !items-center"
+          >
+            <h2 className="text-xl text-white_gray font-bold">
+              Start your new
+              <br /> investment now
+            </h2>
+            <img
+              className="h-8"
+              src={send_button}
+              alt="investment_button"
+            ></img>
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -4,8 +4,8 @@ import AnimatedTextSpan from "./AnimatedText";
 const Projects2 = () => {
   return (
     <section id="projects" className="h-auto w-full relative overflow-hidden">
-      <div className="flex flex-col gap-4 ">
-        <div className="relative p-6 w-[80%] flex flex-col gap-4">
+      <div className="flex flex-col lg:flex-row gap-4 ">
+        <div className="lg:order-2 relative p-6 w-[80%] lg:w-[45%] flex flex-col gap-4">
           <h1 className=" text-6xl text-dark_blue font-bold">
             <AnimatedTextSpan parts={2}>
               Explore some of our projects
@@ -43,7 +43,7 @@ const Projects2 = () => {
             </span>
           </a>
         </div>
-        <div className="projects_carousel fade-in-on-scroll h-full relative flex overflow-x-auto  w-screen gap-2 origin-bottom-left ">
+        <div className="lg:order-1 projects_carousel fade-in-on-scroll h-full lg:w-[65%] lg:pr-0 lg:h-auto relative flex overflow-x-auto  w-screen gap-2 origin-bottom-left ">
           <a className="carousel_card relative flex flex-col snap-start p-2 scroll-ms-6 bg-white_gray rounded-xl">
             <img
               alt="bg_1"
