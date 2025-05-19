@@ -9,7 +9,7 @@ const Technologies = () => {
   return (
     <section
       id="technologies"
-      className="w-full lg:h-screen h-[150vh] relative flex flex-col justify-start items-start lg:mx-24 lg:gap-8 lg:my-24"
+      className="w-full lg:h-screen h-[170vh] relative flex flex-col justify-start items-start lg:mx-24 lg:gap-8 lg:my-24"
     >
       <div className="absolute lg:absolute lg:justify-end flex top-0 right-0 lg:inset-auto lg:w-[34%] gap-4">
         <h1 className="text-4xl w-max lg:text-5xl text-right top-10 right-12 absolute lg:inset-auto lg:relative ">

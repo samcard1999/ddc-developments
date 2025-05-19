@@ -33,8 +33,7 @@ const Home = ({ isPreloading }) => {
       {/* <DDCComparisonChart />
       <BentoGrid /> */}
       {/* <Graphic /> */}
-      {isMobile ? <Projects2 /> : <ProjectsDesktop />}
-
+      <Projects2 />
       <Technologies />
       <Testimonials />
       <Team />

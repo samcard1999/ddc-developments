@@ -95,7 +95,7 @@ const Accordion = ({ title, answer, number, isOpen, onToggle }) => {
             alt={`${number}.webp`}
             className={`object-cover overflow-hidden ${
               isOpen ? "max-h-none" : "max-h-0"
-            } w-[75vw] h-[75vw] rounded-xl object-contain`}
+            } w-[75vw] h-auto  rounded-xl object-contain`}
           />
         </div>
       </div>
@@ -104,7 +104,7 @@ const Accordion = ({ title, answer, number, isOpen, onToggle }) => {
         <img
           src={`assets/technologies/bg__${number}.webp`}
           alt={`${number}.webp`}
-          className={`object-cover overflow-hidden w-[24vw] h-[24vw] ${
+          className={`object-cover overflow-hidden w-auto h-[60vh] ${
             isOpen ? "opacity-100" : "opacity-0"
           } transition-opacity duration-700 object-fill`}
         />
